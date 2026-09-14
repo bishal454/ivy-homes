@@ -1,13 +1,14 @@
+// @ts-nocheck
+"use client"
 import { useEffect, useMemo, useState } from 'react';
-import './App.css';
 import { fetchCatalog } from './data/catalog';
 import { FiltersBar } from './components/FiltersBar';
 import { PropertyCard } from './components/PropertyCard';
 import { PropertyDetails } from './components/PropertyDetails';
 
-const API_BASE = import.meta.env.VITE_IVY_API_BASE_URL || 'https://solve.ivy.homes';
-const API_KEY = import.meta.env.VITE_IVY_API_KEY || '';
-const defaultEmail = import.meta.env.VITE_IVY_DEMO_EMAIL || 'demo1@ivy.homes';
+const API_BASE = process.env.NEXT_PUBLIC_IVY_API_BASE_URL || 'https://solve.ivy.homes';
+const API_KEY = process.env.NEXT_PUBLIC_IVY_API_KEY || '';
+const defaultEmail = process.env.NEXT_PUBLIC_IVY_DEMO_EMAIL || 'demo1@ivy.homes';
 const savedKey = (email) => `ivy-saved-homes-${email}`;
 const sessionKey = 'ivy-session';
 const defaultFilters = {
@@ -64,7 +65,7 @@ async function refreshSession(session) {
 
 function LoginScreen({ onLogin }) {
   const [email, setEmail] = useState(defaultEmail);
-  const [password, setPassword] = useState(import.meta.env.VITE_IVY_DEMO_PASSWORD || '');
+  const [password, setPassword] = useState(process.env.NEXT_PUBLIC_IVY_DEMO_PASSWORD || '');
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
 

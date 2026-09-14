@@ -6,7 +6,7 @@ This repository contains the Ivy Homes property search frontend and the required
 
 ```text
 ivy-homes/
-├── ivy-homes-app/       # Vite + React website
+├── ivy-homes-app/       # Next.js + TypeScript website
 │   ├── public/data/     # canonical downloaded assignment dataset
 │   └── src/
 ├── submission.json      # required answers and findings
@@ -54,7 +54,7 @@ Documentation discrepancies belong in the root-level `submission.json` under `fi
 
 The GitHub repository for this submission is:
 
-`https://github.com/bishal454/ivy-homes-internship-assignment-september-2026-submission`
+`https://github.com/bishal454/ivy-homes`
 
 The deployed app URL should be added to `candidate.demo_url` in `submission.json` after Vercel deployment.
 
@@ -67,7 +67,7 @@ The deployed app URL should be added to `candidate.demo_url` in `submission.json
 - The sidebar stays fixed on desktop and becomes responsive navigation on smaller screens.
 - The production build completes with `npm run build`.
 
-The frontend was built with React, Vite, and assistance from an AI coding tool, as permitted by the assignment.
+The frontend was built with Next.js, React, TypeScript, and assistance from an AI coding tool, as permitted by the assignment.
 
 ## Submission form details
 

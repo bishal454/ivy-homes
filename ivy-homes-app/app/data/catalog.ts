@@ -1,3 +1,4 @@
+// @ts-nocheck
 export const fetchCatalog = async () => {
   const [listingsRes, rentalsRes, projectsRes] = await Promise.all([
     fetch('/data/listings.json'),

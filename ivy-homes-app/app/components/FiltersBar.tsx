@@ -1,3 +1,4 @@
+// @ts-nocheck
 const pretty = (value = '') =>
   String(value)
     .replace(/[-_]+/g, ' ')

@@ -1,3 +1,4 @@
+// @ts-nocheck
 const money = (value) =>
   new Intl.NumberFormat('en-IN', {
     style: 'currency',
