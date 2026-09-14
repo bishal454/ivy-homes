@@ -9,6 +9,11 @@ import { PropertyDetails } from './components/PropertyDetails';
 const API_BASE = process.env.NEXT_PUBLIC_IVY_API_BASE_URL || 'https://solve.ivy.homes';
 const API_KEY = process.env.NEXT_PUBLIC_IVY_API_KEY || '';
 const defaultEmail = process.env.NEXT_PUBLIC_IVY_DEMO_EMAIL || 'demo1@ivy.homes';
+const demoEmails = [
+  defaultEmail,
+  process.env.NEXT_PUBLIC_IVY_DEMO_EMAIL_2 || 'demo2@ivy.homes',
+  process.env.NEXT_PUBLIC_IVY_DEMO_EMAIL_3 || 'demo3@ivy.homes',
+];
 const savedKey = (email) => `ivy-saved-homes-${email}`;
 const sessionKey = 'ivy-session';
 const defaultFilters = {
@@ -96,7 +101,13 @@ function LoginScreen({ onLogin }) {
         <h2>Sign in to continue</h2>
         <label>
           Email
-          <input type="email" value={email} onChange={(event) => setEmail(event.target.value)} required />
+          <select value={email} onChange={(event) => setEmail(event.target.value)} required>
+            {demoEmails.map((demoEmail) => (
+              <option key={demoEmail} value={demoEmail}>
+                {demoEmail}
+              </option>
+            ))}
+          </select>
         </label>
         <label>
           Password
