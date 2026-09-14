@@ -9,9 +9,7 @@ ivy-homes/
 ├── ivy-homes-app/       # Next.js + TypeScript website
 │   ├── public/data/     # canonical downloaded assignment dataset
 │   └── app/             # App Router pages, components, and styles
-├── submission.json      # required answers and findings
-├── statement.md         # assignment brief
-└── API_REFERENCE.md     # supplied API documentation
+└── submission.json      # required answers and findings
 ```
 
 There is only one copy of the dataset. The website loads `listings.json`, `rentals.json`, and `projects.json` from `ivy-homes-app/public/data/`.
