@@ -8,7 +8,7 @@ This repository contains the Ivy Homes property search frontend and the required
 ivy-homes/
 ├── ivy-homes-app/       # Next.js + TypeScript website
 │   ├── public/data/     # canonical downloaded assignment dataset
-│   └── src/
+│   └── app/             # App Router pages, components, and styles
 ├── submission.json      # required answers and findings
 ├── statement.md         # assignment brief
 └── API_REFERENCE.md     # supplied API documentation
@@ -24,7 +24,7 @@ npm install
 npm run dev
 ```
 
-Open the local URL printed by Vite, normally `http://localhost:5173`.
+Open the local URL printed by Next.js, normally `http://localhost:3000`.
 
 The app includes:
 
