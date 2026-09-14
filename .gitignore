@@ -1,5 +1,6 @@
 .env
 node_modules/
 dist/
-data/
 web/
+ivy-homes-app/node_modules/
+ivy-homes-app/dist/
