@@ -4,6 +4,12 @@ A modern property discovery dashboard built with Next.js, React, TypeScript, and
 
 Ivy Homes helps users browse homes for sale, rental properties, and residential projects in one responsive interface. Users can filter the property catalogue, inspect detailed records, save favourites, and keep their session active across page refreshes.
 
+## Live demo
+
+[Open Ivy Homes](https://ivy-homes-silk.vercel.app)
+
+The production app is deployed on Vercel from the `ivy-homes-app` directory.
+
 ## Features
 
 - Secure sign-in with the Ivy Homes API
@@ -97,8 +103,6 @@ npm run lint      # Run the configured lint command
 
 ## Production deployment
 
-The project is ready for deployment on Vercel.
-
 When creating the Vercel project:
 
 1. Select the `ivy-homes` repository.
@@ -106,6 +110,8 @@ When creating the Vercel project:
 3. Keep the framework preset as Next.js.
 4. Add the `NEXT_PUBLIC_*` variables listed above.
 5. Deploy.
+
+The current production deployment is available at [ivy-homes-silk.vercel.app](https://ivy-homes-silk.vercel.app).
 
 ## Data
 
@@ -117,6 +123,10 @@ ivy-homes-app/public/data/
 
 The directory contains the listings, rentals, and projects JSON files used by the dashboard.
 
-## License
+## Security
 
-This project is intended for demonstration and portfolio use.
+Keep API keys, passwords, and other private values in `.env.local`. Never commit files containing real credentials to the repository.
+
+## Support
+
+For help, check the setup instructions above, confirm that the required environment variables are configured, and restart the development server after making configuration changes.
